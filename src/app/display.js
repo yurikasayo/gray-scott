@@ -14,11 +14,13 @@ export class Display {
         this.shader.createAttributes({position: 3, uv2: 2});
         this.shader.createUniforms({
             map: 'sampler2D',
+            binalize: 'bool',
             color1: 'vec3',
             color2: 'vec3',
         });
 
         this.param = {
+            binalize: false,
             color1: [0, 0, 0],
             color2: [1, 1, 1],
         };
@@ -35,6 +37,7 @@ export class Display {
     render() {
         const uniforms = {
             map: this.texture,
+            binalize: this.param.binalize,
             color1: this.param.color1,
             color2: this.param.color2,
         }

@@ -97,13 +97,13 @@ export class MyApp {
 
     setGui() {
         this.gui = new GUI();
+        this.gui.add(this.display.param, "binalize");
         this.gui.addColor(this.display.param, "color1", 1.0);
         this.gui.addColor(this.display.param, "color2", 1.0);
         this.gui.add(this.simulator.param, "D1").min(0.1).max(0.2).step(0.001);
         this.gui.add(this.simulator.param, "D2").min(0.05).max(0.15).step(0.001);
         this.gui.add(this.simulator.param, "f").min(0.025).max(0.045).step(0.0001);
         this.gui.add(this.simulator.param, "k").min(0.06).max(0.07).step(0.0001);
-        this.gui.add(this.simulator.param, "sourceSize").min(0.0001).max(0.05).step(0.0001);
         this.gui.add(this.simulator.param, "sourceSize").min(0.0001).max(0.05).step(0.0001);
         this.gui.add(this.simulator.param, "reset");
     }

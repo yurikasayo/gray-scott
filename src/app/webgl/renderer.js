@@ -104,6 +104,7 @@ export class Renderer {
         switch (type) {
             case 'int':
             case 'sampler2D':
+            case 'bool':
                 gl.uniform1i(location, value);
                 break;
 
